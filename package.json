@@ -1,0 +1,69 @@
+{
+  "name": "matspar",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "analyze": "ANALYZE=true next build",
+    "build": "next build",
+    "dev": "next",
+    "lint": "eslint . --cache --report-unused-disable-directives",
+    "lint:ci": "eslint . --report-unused-disable-directives",
+    "lint:fix": "eslint . --cache --fix",
+    "prepare": "husky install",
+    "prettier": "prettier . --check",
+    "prettier:fix": "prettier . --write",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "yarn prettier:fix",
+      "yarn lint:fix"
+    ],
+    "*.{json,md,css,html}": [
+      "yarn prettier:fix"
+    ]
+  },
+  "dependencies": {
+    "@emotion/cache": "^11.9.3",
+    "@emotion/react": "^11.9.3",
+    "@emotion/server": "^11.4.0",
+    "@emotion/styled": "^11.9.3",
+    "@mui/lab": "^5.0.0-alpha.106",
+    "@mui/material": "^5.10.12",
+    "@noaignite/oui": "^3.3.4",
+    "clsx": "^1.1.0",
+    "embla-carousel-react": "^7.0.9",
+    "next": "^13.0.1",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "smoothscroll-polyfill": "^0.4.4",
+    "styled-components": "^5.3.6",
+    "typescript": "4.9.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/plugin-transform-react-constant-elements": "^7.10.1",
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
+    "@commitlint/cz-commitlint": "^17.0.0",
+    "@emotion/babel-plugin": "^11.9.2",
+    "@next/bundle-analyzer": "^13.0.1",
+    "@noaignite/eslint-config-typescript": "^0.3.0",
+    "@types/react": "^18.0.27",
+    "babel-plugin-optimize-clsx": "^2.6.0",
+    "commitizen": "^4.2.4",
+    "eslint": "^8.12.0",
+    "eslint-config-next": "^13.0.1",
+    "eslint-import-resolver-webpack": "^0.13.2",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.1",
+    "prettier": "^2.7.0",
+    "standard-version": "^9.3.2",
+    "webpack-merge": "^5.2.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
